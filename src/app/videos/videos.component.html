@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+  <app-main-navbar></app-main-navbar>
+ <app-sidebar></app-sidebar>
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Cards</h1>
+      <div style="flex-direction: row; justify-content: space-between; flex: 1;">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Components</li>
+          <li class="breadcrumb-item active">Cards</li>
+        </ol>
+       
+      </nav>
+     
+      <a class="VideoAdd" href="Video-Add">Add Video</a>
+    </div>
+    </div><!-- End Page Title -->
+
+    <!-- <app-merch-select></app-merch-select> -->
+    <br>
+    <section class="section">
+      <div class="row align-items-top">
+        <div class="Container">
+          <app-one-video style="margin: 5px;" *ngFor="let m of videos" [desc]="m.desc" [imgurl]="m.imgurl" [name]="m.name" [id]="m.id" [views]="m.views" [watchtime]="m.watchtime" [question]="m.question" [type]="m.type"></app-one-video>
+        </div>
+      </div>
+    </section>
+    <app-back-to-top></app-back-to-top>
+  </main><!-- End #main -->
+</body>
+</html>

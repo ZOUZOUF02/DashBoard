@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/cdk/overlay-prebuilt.css';
+.CardName {
+    align-self: flex-start, center;
+    flex: auto;
+    border: 1px solid  #0d6efd;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+    margin: var(--bs-card-title-spacer-y);
+    max-width: 60%;
+    max-height: 50px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
+  .CardSize {
+    align-self: flex-end, center;
+    flex: auto;
+    text-align: center;
+    border: 1px solid  #0d6efd;
+    border-radius: 5px;
+    align-content: center;
+    justify-content: center;
+    margin: var(--bs-card-title-spacer-y);
+  }

@@ -1,0 +1,23 @@
+<li class="nav-item">
+    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-journal-text"></i><span>Videos</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+      <li>
+        <a href="Videos/All">
+          <i class="bi bi-circle"></i><span>All Videos</span>
+        </a>
+      </li>
+      <app-video-category *ngFor="let v of VideoTypes" [type]="v"></app-video-category>
+      <li>
+        <a href="Videos/Stats">
+          <i class="bi bi-circle"></i><span>Stats</span>
+        </a>
+      </li>
+      <li>
+        <a href="Videos/Q&A">
+          <i class="bi bi-circle"></i><span>Q&A</span>
+        </a>
+      </li>
+    </ul>
+  </li>

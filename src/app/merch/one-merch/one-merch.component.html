@@ -1,0 +1,23 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{img}}">
+  <div class="CardEssentials">
+    <div class="CardName">{{name}}</div>
+    <div class="CardSize"> Size: {{size}}</div>
+  </div>
+  <div class="CardCollapse">
+    <button (click)="clickEvent()" class="btn btn-primary" style="width: 100%" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseExample'+id"  aria-expanded="false" [attr.aria-controls]="'collapseExample'+id">
+    <i [ngClass]="show ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" ></i>
+  </button>
+  </div>
+  <div class="collapse" [id]="'collapseExample'+id">
+    <div class="card-body" >
+      <p class="card-text">Type: {{type}}</p>
+      <p class="card-text">Price: {{price}}</p>
+      <p class="card-text">Remaining: {{Rem}}</p>
+      <p class="card-text">It is a good platform to learn programming. It is an educational website.</p>
+      <a class="CardButton" href="Merch/{{type}}/Edit/{{id}}">Edit</a>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,57 @@
+  <!-- ======= Header ======= -->
+  <app-main-navbar></app-main-navbar>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+ <app-sidebar></app-sidebar>
+<body>
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row" style="display: flex;">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row" style="display:inline-flex ;">
+
+            <!-- Sales Card -->
+            <app-statcards *ngFor="let s of statcards" [st]="s" class="col-xxl-4 col-md-6" ></app-statcards>
+            <!-- End Sales Card -->
+
+            <!-- Reports -->
+            <app-reports-chart></app-reports-chart>
+
+            <!-- Recent Activity -->
+            <app-recent-activity style="height: 800px;"></app-recent-activity>
+            <!-- End Recent Activity -->
+
+          </div>
+        </div><!-- End Left side columns -->
+
+        <!-- Right side columns -->
+        <div class="col-lg-4">
+
+          <!-- Recent Activity -->
+          <app-topselling></app-topselling>
+          <!--Most Viewed-->
+          <app-videos-most-viewed></app-videos-most-viewed>
+          <!-- Users by continent -->
+          <app-users-by-Region></app-users-by-Region>
+          <!-- End Users by continent -->
+        </div><!-- End Right side columns -->
+        <app-home-news></app-home-news>
+      </div>
+    </section>
+  </main><!-- End #main -->
+  <app-back-to-top></app-back-to-top> <!--BACK TO TOP-->
+</body>

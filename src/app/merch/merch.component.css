@@ -1,0 +1,16 @@
+.Container {
+    flex: auto;
+    width: 100%;
+    padding-left: 35px;
+    display:contents;
+    align-items: center;
+  }
+  .MerchAdd
+  {
+    padding: 5px;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    border-radius: 5px;
+  }
+  

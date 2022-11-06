@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<app-main-navbar></app-main-navbar>
+ <app-sidebar></app-sidebar>
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Cards</h1>
+      <div style="flex-direction: row; justify-content: space-between; flex: 1;">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Components</li>
+          <li class="breadcrumb-item active">Cards</li>
+        </ol>
+       
+      </nav>
+     
+      <a class="MerchAdd" href="Merch-Add">Add Merch</a>
+    </div>
+    </div><!-- End Page Title -->
+
+    <!-- <app-merch-select></app-merch-select> -->
+    <br>
+      <div class="EditContainer">
+            <div class="ItemCard">
+                <input [(ngModel)]="item.imgurl" placeholder="Enter the image URL here">
+                <input [(ngModel)] = "item.name" placeholder="Enter the name of the merch ">
+                <input [(ngModel)] = "item.type" placeholder="Enter the type of the merch ">
+                <input [(ngModel)] = "item.Rem" placeholder="Enter the remaining quantiity of the merch ">
+                <input [(ngModel)] = "item.price" placeholder="Enter the price of the merch ">
+                <input [(ngModel)] = "item.size" placeholder="Enter the size of the merch ">
+                <input [(ngModel)] = "item.desc" placeholder="Enter the description of the merch ">
+                <a class="CardButton" type="button" (click)="Submit()" href="Merch/All">Submit</a>
+            </div>  
+            <app-sample-card [desc]="item.desc" [img]="item.imgurl" [name]="item.name" [price]="item.price" [Rem]="item.Rem" [size]="item.size" [type]="item.type"></app-sample-card>
+      </div>
+    <app-back-to-top></app-back-to-top>
+  </main><!-- End #main -->
+</body>
+</html>

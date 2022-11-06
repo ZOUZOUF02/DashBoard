@@ -1,0 +1,29 @@
+<div class="SampleCard" style="width: 18rem;">
+    <img class="card-img-top" src="{{imgurl}}">
+    <div class="CardEssentials">
+      <div class="CardName">{{name}}</div>
+      <div class="CardSize"> Views: {{views}}</div>
+    </div>
+    <div class="CardCollapse">
+      <button (click)="clickEvent()" class="btn btn-primary" style="width: 100%" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseExample'+id"  aria-expanded="false" [attr.aria-controls]="'collapseExample'+id">
+      <i [ngClass]="show ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" ></i>
+    </button>
+    </div>
+    <div class="collapse" [id]="'collapseExample'+id">
+        <div class="card-body" >
+            <p class="card-text">Type: {{type}}</p>
+            <p class="card-text">Time: {{time}}</p>
+            <p class="card-text">Watchtime: {{watchtime}}</p>
+            <p class="card-text">{{desc}}</p>
+            <p class="card-text">{{question}}</p>
+            <div class="CardEssentials">
+            <a class="CardCheck">CheckAnswers</a>
+            <a class="CardEdit" href="Videos/{{type}}/Edit/{{id}}">Edit</a>
+            </div>
+            
+          </div>
+    </div>
+  </div>
+  
+  
+  
