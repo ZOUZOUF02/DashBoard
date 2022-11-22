@@ -18,23 +18,22 @@
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-      <div class="row" style="display: flex;">
+      <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row" style="display:inline-flex ;">
+        <div class="col-lg-8" >
+          <div class="row">
 
             <!-- Sales Card -->
-            <app-statcards *ngFor="let s of statcards" [st]="s" class="col-xxl-4 col-md-6" ></app-statcards>
+            <app-statcards style="height: 10%;" *ngFor="let s of statcards" [st]="s" class="col-xxl-4 col-md-6" ></app-statcards>
             <!-- End Sales Card -->
 
             <!-- Reports -->
             <app-reports-chart></app-reports-chart>
 
             <!-- Recent Activity -->
-            <app-recent-activity style="height: 800px;"></app-recent-activity>
+            <app-recent-activity style="max-height: 615px"></app-recent-activity>
             <!-- End Recent Activity -->
-
           </div>
         </div><!-- End Left side columns -->
 

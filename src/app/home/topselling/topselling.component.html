@@ -1,7 +1,7 @@
 <div class="col-12">
     <div class="card top-selling overflow-auto">
 
-      <div class="filter">
+      <!-- <div class="filter">
         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
           <li class="dropdown-header text-start">
@@ -12,13 +12,13 @@
           <li><a class="dropdown-item" href="#">This Month</a></li>
           <li><a class="dropdown-item" href="#">This Year</a></li>
         </ul>
-      </div>
+      </div> -->
 
-      <div class="card-body pb-0">
-        <h5 class="card-title">Top Selling <span>| Today</span></h5>
+      <div class="card-body pb-0"  style="max-height: 350px; overflow-y:auto">
+        <h5 class="card-title">Top Selling <!--span>| Today</span--></h5>
 
         <table class="table table-borderless">
-          <thead>
+          <thead style="position:sticky;">
             <tr>
               <th scope="col">Preview</th>
               <th scope="col">Product</th>
@@ -28,40 +28,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-              <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-              <td>$64</td>
-              <td class="fw-bold">124</td>
-              <td>$5,828</td>
-            </tr>
-            <tr>
-              <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt=""></a></th>
-              <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
-              <td>$46</td>
-              <td class="fw-bold">98</td>
-              <td>$4,508</td>
-            </tr>
-            <tr>
-              <th scope="row"><a href="#"><img src="assets/img/product-3.jpg" alt=""></a></th>
-              <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-              <td>$59</td>
-              <td class="fw-bold">74</td>
-              <td>$4,366</td>
-            </tr>
-            <tr>
-              <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
-              <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-              <td>$32</td>
-              <td class="fw-bold">63</td>
-              <td>$2,016</td>
-            </tr>
-            <tr>
-              <th scope="row"><a href="#"><img src="assets/img/product-5.jpg" alt=""></a></th>
-              <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
-              <td>$79</td>
-              <td class="fw-bold">41</td>
-              <td>$3,239</td>
+            <tr *ngFor="let m of merch" style="height: 80px; max-height: 80px ;">
+              <th scope="row"><img style="height: 80px;" src="{{m.imgurl}}" alt=""></th>
+              <td><a href="#" class="text-primary fw-bold">{{m.name}}</a></td>
+              <td>${{m.price}}</td>
+              <td class="fw-bold">150</td>
+              <td>{{Revenue(m.price, 150)}}</td>
             </tr>
           </tbody>
         </table>

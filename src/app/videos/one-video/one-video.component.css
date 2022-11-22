@@ -20,7 +20,6 @@
   flex: auto;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
   max-height: 700px;
   word-wrap: break-word;
   background-color: var(--bs-card-bg);
